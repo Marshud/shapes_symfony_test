@@ -5,3 +5,4 @@ Made for TekJuice Interview
 - After cloning the repo, run  ```composer install``` to install all the necessary dependencies
 - Then after that run ```php bin/console debug:router``` to see the available routes but mainly two i.e `/cicle/{radius}` and `/triangle/{a}/{b}/{c}`
 - Run `symfony server:start` to start the application
+- In a different terminal you can run the unit tests using `php bin/phpunit` (But lookout for the URL in the Tests)
