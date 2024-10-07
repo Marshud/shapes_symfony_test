@@ -6,7 +6,7 @@ controllers:
 
 circle:
     path: /cirlce/{radius}
-    controller: App\Controller\CircleController::index
+    controller: App\Controller\GeometryControler::getCircleData
     methods: GET
     defaults: 
         radius: 2
@@ -15,7 +15,7 @@ circle:
 
 triangle:
     path: /triangle/{a}/{b}/{c}
-    controller: App\Controller\TriangleController::index
+    controller: App\Controller\GeometryControler::getTriangleData
     methods: GET
     defaults:
         a: 3
