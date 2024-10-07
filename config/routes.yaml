@@ -3,3 +3,12 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+circle:
+    path: /cirlce/{radius}
+    controller: App\Controller\CircleController::index
+    methods: GET
+    defaults: 
+        radius: 2
+    requirements:
+        radius: '\d+'
