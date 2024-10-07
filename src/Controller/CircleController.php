@@ -19,7 +19,7 @@ class CircleController extends AbstractController
       "type" => self::$name,
       "radius" => $this->radius,
       "surface" => $this->calculateSurface(),
-      "circumference" => $this->calculateSurface()
+      "circumference" => $this->calculateCircumference()
     ]);
 
   }
@@ -32,6 +32,12 @@ class CircleController extends AbstractController
   public function CalculateDiameter(): float 
   {
     return 2*$this->radius;
+  }
+
+  public function calculateCircumference(): float
+  {
+    $circumference = $this->calculateSurface();
+    return $circumference;
   }
 
 }
