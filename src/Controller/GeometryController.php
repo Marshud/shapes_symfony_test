@@ -14,12 +14,20 @@ class GeometryController extends AbstractController
   private $geometryCalculator;
   private $serializer;
 
+  /**
+   * The constructor takes the GeometryCalculator object and SerializerInterface
+   * as parameters and assigns them to the private properties accordingly
+   */
   public function __construct(GeometryCalculator $geometryCalculator, SerializerInterface $serializer)
   {
     $this->geometryCalculator = $geometryCalculator;
     $this->serializer = $serializer;
   }
 
+  /**
+   * The method gets the circle data after recieving the radius as a parameter
+   * @return json
+   */
   public function getCircleData(float $radius): JsonResponse
   {
     $circle = new Circle($radius);
@@ -31,6 +39,10 @@ class GeometryController extends AbstractController
     return new JsonResponse($json_data, 200, [], true);
   }
 
+  /**
+   * The method gets the triangle data after recieving the 3 sides as a parameter
+   * @return json
+   */
   public function getTriangleData(float $a, float $b, float $c): JsonResponse
   {
     $triangle = new Triangle($a, $b, $c);

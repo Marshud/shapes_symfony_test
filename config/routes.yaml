@@ -4,6 +4,9 @@ controllers:
         namespace: App\Controller
     type: attribute
 
+# The circle path recieves a radius as a parameter but 
+# incase it doesn't exist, I have set a default
+# also the radius is validated to be a digit of any length
 circle:
     path: /circle/{radius}
     controller: App\Controller\GeometryController::getCircleData
@@ -13,6 +16,8 @@ circle:
     requirements:
         radius: '\d+'
 
+# The triangle path recives the 3 sides as parameters seperated by /
+# in their absence defaults have been set and validated to be digits of any length
 triangle:
     path: /triangle/{a}/{b}/{c}
     controller: App\Controller\GeometryController::getTriangleData

@@ -6,6 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class GeometryControllerTest extends WebTestCase
 {
+  /**
+   * Simulates a useragent request, simulates an okay response and asserts if the two 
+   * resposes are equal for the getCircleData Property
+   * I have hardcoded the URL based on my environment, so can be adjusted accordingly
+   */
   public function testGetCircleData()
   {
     // Simulate a client
@@ -25,6 +30,12 @@ class GeometryControllerTest extends WebTestCase
     $this->assertJsonStringEqualsJsonString($expectedData, $responseContent);
   }
 
+  /**
+   * Simulates a useragent request, simulates an okay response and asserts if the two 
+   * resposes are equal for the getTriangleData Property
+   * I have hardcoded the URL based on my environment, so can be adjusted accordingly
+   * 
+   */
   public function testTriangleData() 
   {
     // Simulate a client request

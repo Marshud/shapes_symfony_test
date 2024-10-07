@@ -9,6 +9,10 @@ use PHPUnit\Framework\TestCase;
 
 class GeometryCalculatorTest extends TestCase
 {
+  /**
+   * Creates a new Circle object, performs the necessary calculations and 
+   * asserts whether the expected and computed results match
+   */
   public function testCalculateCircleData()
   {
     $circle = new Circle(2);
@@ -25,6 +29,10 @@ class GeometryCalculatorTest extends TestCase
     $this->assertSame($expected, $result);
   }
 
+  /**
+   * Creates a new Triangle object, performs the necessary calculations and 
+   * asserts whether the expected and computed results match
+   */
   public function testCalculateTriangleData()
   {
     $triangle = new Triangle(3, 4, 5);
@@ -43,6 +51,10 @@ class GeometryCalculatorTest extends TestCase
     $this->assertSame($expected, $result);
   }
 
+  /**
+   * Creates two new objects of our cirlce and triangle, then uses our GeometryCalculator Service to get the sum of areas (sumAreas)
+   * The method then compares the expected and computed result to make sure they are the same
+   */
   public function testSumAreas() 
   {
     $circle = new Circle(2);
@@ -55,6 +67,10 @@ class GeometryCalculatorTest extends TestCase
     $this->assertSame($expected, $sumAreas);
   }
 
+  /**
+   * Creates two new objects of our cirlce and triangle, then uses our GeometryCalculator Service to get the sum of diameters (sumDiamters)
+   * The method then compares the expected and computed result to make sure they are the same
+   */
   public function testSumDiameters()
   {
     $circle = new Circle(2);
