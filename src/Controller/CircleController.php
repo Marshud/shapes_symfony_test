@@ -9,13 +9,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class CircleController extends AbstractController
 {
   public int $radius;
+  public static string $name = "Cirlce";
 
   public function index(int $radius): JsonResponse
   {
     $this->radius = $radius;
 
     return $this->json([
-      "type" => "cirlce",
+      "type" => self::$name,
       "radius" => $this->radius,
       "surface" => $this->calculateSurface(),
       "circumference" => $this->calculateSurface()

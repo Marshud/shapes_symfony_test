@@ -12,3 +12,16 @@ circle:
         radius: 2
     requirements:
         radius: '\d+'
+
+triangle:
+    path: /triangle/{a}/{b}/{c}
+    controller: App\Controller\TriangleController::index
+    methods: GET
+    defaults:
+        a: 3
+        b: 4
+        c: 5
+    requirements:
+        a: '\d+'
+        b: '\d+'
+        c: '\d+'
