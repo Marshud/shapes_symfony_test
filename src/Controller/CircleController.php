@@ -23,12 +23,12 @@ class CircleController extends AbstractController
 
   }
 
-  public function calculateSurface(): int // Also the circumference
+  public function calculateSurface(): float // Also the circumference
   {
     return 2*3.14*$this->radius;
   }
 
-  public function CalculateDiameter(): int 
+  public function CalculateDiameter(): float 
   {
     return 2*$this->radius;
   }
