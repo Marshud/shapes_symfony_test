@@ -4,7 +4,7 @@ namespace App\Entity;
 
 class Circle 
 {
-  public static string $name = "Cirlce";
+  public static string $name = "Circle";
   private float $radius;
 
   public function __construct(float $radius)

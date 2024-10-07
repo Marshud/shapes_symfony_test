@@ -21,7 +21,7 @@ class GeometryControllerTest extends WebTestCase
 
     // Now we check the response data
     $responseContent = $client->getResponse()->getContent();
-    $expectedData = '{"type":"Cirlce","radius":2.0,"surface":12.566370614359172,"circumference":12.566370614359172}';
+    $expectedData = '{"type":"Circle","radius":2.0,"surface":12.566370614359172,"circumference":12.566370614359172}';
     $this->assertJsonStringEqualsJsonString($expectedData, $responseContent);
   }
 

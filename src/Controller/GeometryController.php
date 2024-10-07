@@ -23,7 +23,7 @@ class GeometryController extends AbstractController
   public function getCircleData(float $radius): JsonResponse
   {
     $circle = new Circle($radius);
-    $circle_data = $this->geometryCalculator->calculateCirlceData($circle);
+    $circle_data = $this->geometryCalculator->calculateCircleData($circle);
 
     // Serialize the data
     $json_data =$this->serializer->serialize($circle_data, 'json');
@@ -57,5 +57,5 @@ class GeometryController extends AbstractController
   //     'sum_diameters' => $sumDiameters
   //   ]);
   // }
-  
+
 }

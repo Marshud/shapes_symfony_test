@@ -7,7 +7,7 @@ use App\Entity\Triangle;
 
 class GeometryCalculator 
 {
-  public function calculateCirlceData(Circle $circle): array
+  public function calculateCircleData(Circle $circle): array
   {
     return [
       'type' => Circle::$name,
