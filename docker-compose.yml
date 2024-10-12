@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: my-shapes-app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=dev
