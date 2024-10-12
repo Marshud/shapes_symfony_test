@@ -26,3 +26,8 @@ services:
     # Registering my GeometryCalculator Service
     App\Services\GeometryCalculator:
         public: true
+
+    # Register the Exception Listener
+    App\EventListener\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }

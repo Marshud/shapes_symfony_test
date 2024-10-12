@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Exception\ShapeException;
+
 class Circle 
 {
   public static string $name = "Circle";
@@ -13,6 +15,10 @@ class Circle
    */
   public function __construct(float $radius)
   {
+    // Check that the radius is greater than zero
+    if($radius <= 0) {
+      throw new ShapeException('Circle Radius must be greater than zero', 400);
+    }
     $this->radius = $radius;
   }
 

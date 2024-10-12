@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Exception\ShapeException;
 class Triangle 
 {
   public static string $name =  "Triangle";
@@ -15,6 +16,11 @@ class Triangle
    */
   public function __construct(float $a, float $b, float $c)
   {
+    // Check that no side is zero
+    if($a<=0 || $b<=0 || $c<=0) {
+      throw new ShapeException('All triangle sides must be greater than zero', 400);
+    }
+
     $this->a = $a;
     $this->b = $b;
     $this->c = $c;
